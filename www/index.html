@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+<!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Photo Booth</title>
+</head>
+
+<body>
+<table>
+    <tr>
+    <td style="font-size: 3em; color: red;" id="1">1:<img id="photo1" src="/img/blank.jpg"></td>
+    <td id="2">2:<img id="photo2" src="/img/blank.jpg"></td>
+    <td id="3">3:<img id="photo3" src="/img/blank.jpg"></td>
+    <td id="4">4:<img id="photo4" src="/img/blank.jpg"></td>
+    <td id="5">5:<img id="photo5" src="/img/blank.jpg"></td>
+    <td id="6">6:<img id="photo6" src="/img/blank.jpg"></td>
+    <td id="7">7:<img id="photo7" src="/img/blank.jpg"></td>
+    <td id="8">8:<img id="photo8" src="/img/blank.jpg"></td>
+</tr>
+<tr>
+    <td id="9">9:<img id="photo9" src="/img/blank.jpg"></td>
+    <td id="10">10:<img id="photo10" src="/img/blank.jpg"></td>
+    <td id="11">11:<img id="photo11" src="/img/blank.jpg"></td>
+    <td id="12">12:<img id="photo12" src="/img/blank.jpg"></td>
+    <td id="13">13:<img id="photo13" src="/img/blank.jpg"></td>
+    <td id="14">14:<img id="photo14" src="/img/blank.jpg"></td>
+    <td id="15">15:<img id="photo15" src="/img/blank.jpg"></td>
+    <td id="16">16:<img id="photo16" src="/img/blank.jpg"></td>
+</tr>
+</br>
+</table>
+    <div class="app">
+        <h1>Apache Cordova</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">PHOTO BOOTH: Take up to 16 photos!</p>
+        </br>
+            <p class="event received">Take a photo: </p>
+            <button id="btn">Take picture</button></br>
+            <h1>PHOTO NUMBER:</h1> <select id="x">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+            </select>
+        </div>
+        <table>
+            <tr>
+               <th>LAST ADDED:</th><th colspan="2">Compare:</th>
+            <tr>
+                <td><img class="big" src="/img/blank.jpg" id="added-img"></td>
+                <td>New Picture:<img class="big" src="/img/blank.jpg" id="new-img"><button id="new">Replace with this</button></td>
+                <td>Previous Picture:<img class="big" src="/img/blank.jpg" id="old-img"><button id="old">Keep this one</button></td>
+            </tr>
+           </table>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
