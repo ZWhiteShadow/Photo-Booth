@@ -32,16 +32,6 @@ The project provided hands-on experience integrating native mobile device capabi
 
 ---
 
-## Development Process
-
-The project began as a basic camera application before expanding into a more complete photo management workflow.
-
-Development focused on improving the user experience by allowing users to organize multiple image locations, preview existing photos before replacing them, and simplify repetitive photo updates through a straightforward interface.
-
-Building the application provided experience working with mobile APIs, JavaScript event handling, DOM manipulation, and integrating native device functionality into a cross-platform application.
-
----
-
 ## Skills Demonstrated
 
 * Mobile application development
